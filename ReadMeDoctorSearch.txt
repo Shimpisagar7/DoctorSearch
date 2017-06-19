@@ -12,14 +12,15 @@
  
 2. We have two repositories on git.
 	- Dev version -
-		URL - 
-		This version has a lot of developer checkins. Here you can find out the process which we followed and how all our checkins worked.
+		URL - https://github.com/Dr-6/Dr.-Search
+		This version has all of the developer checkins. Here you can find out the process which we followed and how all our checkins worked.
 	- Client version
-		URL -
-		This is production version of the code, You can pull this repository and you can just start exploring Doctor Search easily following instructions 
-		provided in step 1.
+		URL - https://github.com/Shimpisagar7/DoctorSearch
+		This is production version of the code, You can pull this repository and you can just start exploring Doctor Search easily 		   following instructions provided in step 1. 
+		We created this version just to pull the client deliverable code, individual contribution can be seen at Dev version.
+		
 
 3. For all other information visit the contact us page of our website.
 
 4. To see more information such as architechture designs, lo-fi prototypes, sequence diagram and other information please see the 
-   ACS Document.pdf
+   Dr.Search Report(ACS).pdf

@@ -1,0 +1,241 @@
+body{
+    margin: 0;
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#cbccc8), to(#fff)) fixed;*/
+}
+
+/*navigation bar*/
+
+#one{
+  float: left;
+  /*position: fixed;*/
+  margin-left: 20px;
+  margin-top: 5px;
+}
+#two{
+  float: left;
+  /*position: fixed;*/
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 35px;
+  width: 15%;
+  font-family: 'Acme', sans-serif;
+}
+
+.topnav {
+  text-align: left;
+  overflow: hidden;
+  background-color: #39393a;
+  margin-left: 20%;
+  margin-top: 0px;
+  border-top-left-radius: 50px;
+}
+
+.topnav #myTopnav a{
+display: inline-block;
+}
+
+.topnav a {
+  display: inline-block;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+  font-family: 'Volkhov', sans-serif;
+  color: orange;
+  text-align: left;
+  padding-top: 12px;
+  padding-bottom: 12px; 
+  padding-left: 26px;
+  text-decoration: none;
+  font-size: 16px;
+  padding-right: 50px;
+ 
+}
+
+.topnav a:hover {
+  color: orange;
+}
+
+.topnav a:hover:not(.active){
+  background-color: black;
+    -webkit-transform:scale(1.15);/*safari and chrome*/
+    -moz-transform:scale(1.15); /* Firefox */
+    -ms-transform:scale(1.15); /* IE 9 */
+    -o-transform:scale(1.15); /* Opera */
+    transform:scale(1.15);
+}
+
+
+.active {
+background-color: #267714;
+}
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+/*displaying list*/
+/*table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 8px;
+  margin-left: 0px;
+  margin-right: auto;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+td.first{
+    margin-left: 10px; 
+}
+
+td.second{
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: orange;
+}*/
+/*slide panel*/
+.fade.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+/*displaying map*/
+
+#map{
+   
+   height:540px; 
+   width:49.5%; 
+   position:fixed !important; 
+   left:50%;
+   display:inline;
+   margin-top: 0px;
+   border: 2px solid #39393a;
+   border-radius: 5px;
+   top:130px;
+
+}
+
+.header {
+    position: fixed;
+    z-index: 1;
+    background: white;
+    width: 100%;
+}
+/*medical list*/
+#list{
+   border: 1px border-style solid;
+   height:100;
+   width:49.5%;
+   position:absolute;
+   margin-left: 10px;
+   background: -webkit-gradient(linear, left top, left bottom, from(#cbccc8), to(#fff)) fixed;
+   border-radius: 5px;
+   overflow-y: auto; 
+   top:130px;
+
+}
+
+#floating-panel{
+    margin-bottom: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 97.4px;
+    background: white;
+    width: 49.5%;
+    left: 10px;
+
+
+}
+
+
+#mode{
+  margin: 5px;
+  padding: 0px 20px;
+  font-size: 15px;
+  font-family: 'Volkhov', sans-serif;
+
+
+}
+
+#medicalImg{
+  margin-top: 5px;
+  margin-left: 5px;
+  border:2px solid #39393a;
+  float: left;
+}
+
+name{
+  margin-left: 20px;
+  font-size: 20px;
+  line-height: 19px;
+  position: absolute;
+}
+
+.fade{
+  margin-left: 5px;
+  font-family: 'Volkhov', sans-serif;
+  color: #39393a;
+}
+
+button{
+  margin-left: 5px;
+}
+
+select{
+    background-color: #39393a;
+    color: orange;
+    padding: 11px 60px;
+    letter-spacing: 0.7px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'Volkhov', sans-serif;
+
+     }
+
+
+/*responsiveness*/
+@media only screen and (max-width: 320px) {
+
+    body { font-size: 0.6em; }
+    h1 {
+        font-size: 5.9vw;
+    }
+    h2 {
+        font-size: 5.0vh;
+    }
+    h2 {
+        font-size: 1.5vh;
+    }
+    p {
+        font-size: 2vmin;
+    }
+
+}

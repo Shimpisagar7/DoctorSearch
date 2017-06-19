@@ -1,0 +1,99 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+   
+  <!-- Custom CSS -->
+  <link href=".\styles\index.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom JS -->
+  <script src=".\scripts\hamburgerMenu.js"> </script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href=".\drIndex.html">Search Your Doctor</a>
+  <a href=".\medicalIndex.html">Locate Medical Store</a>
+  <a href=".\healtharticle.html">Read Health Articles</a>
+  <a href=".\aboutUs.html">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px" class="name_logo">
+  <h1 id="name">Dr. Search</h1>
+  <a href=".\index.html"> <img id="logo" src=".\images\logo.png" class="img-responsive" alt="Responsive image" width="250" height="250"> </a>
+</div>
+
+<div class="buttons">
+  <div id="doctor"  class="img-responsive">
+    <a href=".\drIndex.html"> <img  src=".\images\dr_button.png"  alt="Search your doctor" width="150px" height="150px"> </a><br>
+    <p id="doctor_text"> <a href=".\drIndex.html"> Find Your Doctor </a> </p>
+  </div>
+
+  <div id="medical"  class="img-responsive">
+    <a href=".\medicalIndex.html"> <img  src=".\images\medical_button.png"  alt="Find a medical store" width="150px" height="150px"> </a>
+    <p id="medical_text"> <a href=".\medicalIndex.html"> Locate Medical Store </a> </p>
+  </div>
+
+  <div id="article"  class="img-responsive">
+    <a href=".\healtharticle.html"> <img src=".\images\article_button.png" id="article" alt="Read Health Articles" width="150px" height="150px"></a>
+    <p id="article_text"> <a href=".\healtharticle.html"> Read Health Articles </a> </p>
+  </div>
+</div>
+
+  <!--Footer -->
+
+  <div class="footer">
+    <div id="left">
+      <p id="left_header"> Doctors Category </p>
+      <ul id="drCatList">
+                <li> <a href=".\indexDetails.html?detail=Orthopedic"> Orthopedic </a> </li>
+                <li> <a href=".\indexDetails.html?detail=Throat"> ENT </a> </li>
+                <li> <a href=".\indexDetails.html?detail=Gynecologist"> Gynecologist </a> </li>
+                <li> <a href=".\indexDetails.html?detail=Dermatologist"> Dermatologist </a> </li>
+                <li> <a href=".\indexDetails.html?detail=Surgeon"> Surgeon </a> </li>
+
+
+      </ul>
+    </div>
+
+    <div id="middle">
+      <a href=".\contactUs.html" id="mid_header1" > Contact Us </a> <br>
+      <a href=".\aboutUs.html" id="mid_header2"> About Us </a>  <br>
+      <p id="mid_header3"> Follow Us On </p> <br>
+      <div id="socialLogo">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </div>
+
+    <div id="right">
+      <p id="right_header"> Cities </p>
+      <ul id="cityList">
+                <li> <a href=".\indexDetails.html?detail=Heidelberg"> Heidelberg </a> </li>
+                <li> <a href=".\indexDetails.html?detail=Mannheim"> Mannheim </a> </li>
+                <li> <a href=".\indexDetails.html?detail=Berlin"> Berlin </a> </li>
+                <li> <a href=".\indexDetails.html?detail=Walldorf"> Walldorf </a> </li>
+      </ul>
+    </div>
+  </div>
+<!--
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+-->
+</body>
+</html>

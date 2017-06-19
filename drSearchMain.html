@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  
+  
+    <head>
+        <link rel="stylesheet" href=".\styles\drSearchMain.css">
+    </head>
+
+    <body>   
+            <!-- Select box Dr.Category -->
+            <center>
+                <div style="color:red; position: absolute; top: 9%; left: 41%">*Note: Please select all the fields!!</div>
+            </center>
+         <div id="selection">
+            <div id="boxOne">
+            <h2><span style="color:red;">*</span>Doctor Category</h2>
+            <select  ng-model="selectedCategory" required>
+	            
+                <option id="drCat" value="" selected disabled> Select Doctor Category</option>
+                <option value="Surgeon">Surgeon</option>
+                <option value="Throat">Throat</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <option value="Orthopedic">Orthopedic</option>
+                
+    
+            </select>
+            </div>
+
+            <!-- Select box for User.City -->
+            <div id="boxTwo">
+            <h2><span style="color:red;">*</span>City</h2>
+            <select ng-model="selectedCity" required>
+	  
+                <option value="" selected disabled>Select your city</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Heidelberg">Heidelberg</option>
+                <option value="Mannheim">Mannheim</option>
+                <option value="Walldorf">Walldorf</option>
+            </select>
+            </div>
+
+            <!-- select box for insurance company -->
+
+            <div id="boxThree">
+            <h2><span style="color:red;">*</span>Insurance Company</h2>
+            
+            <select ng-model="selectedInsurance" required>  
+
+	            <option value="" selected disabled>Select insurance company</option>
+                <option value="AOK">AOK</option>
+                <option value="TK">TK</option>
+                <option value="Mawista">Mawista</option>
+    
+            </select>
+            </div>
+
+            <!-- Code for creating submit button-->
+            </div>
+            <div>
+                <a id="search" ng-href="#/drList/{{selectedCategory}}/{{selectedCity}}/{{selectedInsurance}}"> Search </a>
+            </div>
+         
+    <hr id="footerHr" style="margin-top: 14.1%; height: 3px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+        <div class="footer">
+        <h3 id="docFooter"><a id="docFooter" href=".\contactUs.html">Contact</a>
+        <a id="docFooter" href=".\aboutUs.html"><br>About us</a>
+        <br>Follow us on</h3>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        </div>
+    
+    </body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=".\styles/medicalSearchMain.css">
+    <title>Medical Search</title>
+    </head>
+
+<body ng-app="minmax">
+    
+<div ng-controller="homeCtrl">
+        <!--select Box for selecting cites -->
+        <h1><span style="color:red;">*</span> Select your City </h1>
+        
+       
+            <div class="form-group">
+                <select name="city"
+                class="form-control"
+                ng-model="formModel.city">
+                <option value="" selected disabled>Please Choose</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Heidelberg">Heidelberg</option>
+                <option value="Mannheim">Mannheim</option>
+                <option value="Walldorf">Walldorf</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" ng-click="onSubmit()">Search</button>
+            </div>
+        
+</div>
+
+<hr>
+        <div class="footer">
+        <h3 id="medFooter"><a id="medFooter" href=".\contactUs.html">Contact</a>
+        <a id="medFooter" href=".\aboutUs.html"><br>About us</a>
+        <br>Follow us on</h3>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        </div>
+
+</body>
+

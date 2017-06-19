@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<title>Firebase connection to angularJS</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQGEm9Gijz3AX7dXP2_9uzgNzxXMPBm04"
+            async defer></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet"> 
+<!--script src="medicalSearchMain.js"></script-->
+
+
+</head>
+<body ng-app="test">
+      <header class="header">
+        <img id="one" src=".\images\logo.png" alt="logo" width="70" height="70">
+        <p id="two"><b>Dr.  Search</b></p>
+
+        <div class="topnav" id="myTopnav">
+          <a href=".\index.html"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a>
+          <a href=".\drIndex.html"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Doctor Search</a>
+          <a class="active" ><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a>
+          <a href=".\healtharticle.html"><i class="fa fa-heartbeat" style="font-size:25px;color:lightblue;"></i> Health Articles</a>
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+      </header>
+      <div ng-controller = "testCtrl">
+      </div>
+
+<div ng-view>
+</div>
+</body>
+<!--Including Javascript files-->
+<script src = ".\scripts\app.js"></script>
+<script src = ".\scripts\medicalSearchMain.js"></script>
+<script src = ".\scripts\medicalList.js"></script>
+<script>
+var config = {
+    apiKey: "AIzaSyDWBk69uq9bc-VmUtnQneLqypmcg09ipzQ",
+    authDomain: "drseach-f1f59.firebaseapp.com",
+    databaseURL: "https://drseach-f1f59.firebaseio.com",
+    projectId: "drseach-f1f59",
+    storageBucket: "drseach-f1f59.appspot.com",
+    messagingSenderId: "179157502879"
+  };
+firebase.initializeApp(config);
+</script>
+</html>

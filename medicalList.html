@@ -1,0 +1,44 @@
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+<link rel="stylesheet" href=".\styles\medicalList.css">
+
+        <div id="floating-panel">
+            <b style="color:orange">Choose Your Mode of Travel: </b>
+            <select id="mode">
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Bicycling</option>
+            <option value="TRANSIT">Transit</option>
+            </select>
+        </div>
+        <!--Display Medical Stores List.-->
+        <br>
+        <div id="list" ng-init="initMap()">
+            <div style="overflow-y:auto" ng-repeat="recName in recordArray">
+                <div ng-mouseover="setMarker(recName.latitude,recName.longitude)">
+				<div>
+                    <p style="margin-left:10px; font-size: 22px; display: inline-block; left: 50px;"><b>{{recName.Name}}</b></p>
+                    <img id="medicalImg" src = {{recName.Image}} alt ="Picture of medical store"></img>
+                    <br><br><br>
+                    
+                </div>
+                </div>
+            <div id="medicalDetails">
+
+                <div ng-if="bool" class="fade" >
+                    Contact : {{recName.Contact}}<br>
+                    City : {{recName.city}}<br>
+                    Address : {{recName.Address}}<br>
+					Timings : 
+                    <li ng-repeat="timeRec in recName.Timing">
+                            {{timeRec.dayTime}}</li><br>             
+                </div>
+                <br>
+            <button ng-click="setMarker(recName.latitude,recName.longitude)">show on map</button>
+            <button ng-click="bool=!bool">Show/Hide more data</button>
+            <hr style="border-top: 2px dotted #8c8b8b">
+            </div> 
+            </div> 
+        </div>
+
+        <div id="map"></div>
+           

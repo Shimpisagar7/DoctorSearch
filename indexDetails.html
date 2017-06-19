@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQGEm9Gijz3AX7dXP2_9uzgNzxXMPBm04" async defer></script>       
+
+</head>
+<body ng-app="test">
+
+<div ng-controller="indexDetCtrl">
+</div>
+<div ng-view>
+</div>
+</body>
+<!--Including javascript files-->
+<script src = "./scripts/myAppDetails.js"></script>
+<script src = "./scripts/listAccCity.js"></script>
+<script src = "./scripts/listAccSpecialization.js"></script>
+
+<script>
+var config = {
+    apiKey: "AIzaSyDWBk69uq9bc-VmUtnQneLqypmcg09ipzQ",
+    authDomain: "drseach-f1f59.firebaseapp.com",
+    databaseURL: "https://drseach-f1f59.firebaseio.com",
+    projectId: "drseach-f1f59",
+    storageBucket: "drseach-f1f59.appspot.com",
+    messagingSenderId: "179157502879"
+  };
+firebase.initializeApp(config);
+</script>
+</html>

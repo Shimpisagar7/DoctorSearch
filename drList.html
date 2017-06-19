@@ -1,0 +1,79 @@
+<head>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+    <link rel="stylesheet" href=".\styles\drList.css">
+</head>
+ 
+    <div id="floating-panel">
+    <b style="color:orange">Choose Your Mode of Travel: </b>
+    <!--Displaying values to users to select -->
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    </div>
+    <br>
+    
+    <div id="list" ng-init="initMap()">
+
+      <!--ng-repeat for fetching records from array and displaying all the information of the doctors-->
+
+      <div style="overflow-y:auto" ng-repeat="recName in recordArray | orderBy : '-avgRating'">        
+          <div ng-mouseover="setMarker(recName.latitude,recName.longitude)">
+              <p style="margin-left:10px; font-size: 22px; display: inline-block; left: 50px; margin-top: 10px;"><b>{{recName.name}}</b></p><br>
+              <img id="drImg" src={{recName.image}} alt="Picture of Doctor"></img>
+              <div id="addAndph" class="fade">
+                <br>
+                 <b>Address</b> : {{recName.address}} <br>
+                  <b>Phone Number</b> : {{recName.phone_number}}
+              </div>
+    
+          </div> 
+          <div id="drDetails">  
+          <div ng-if="bool" class="fade">
+            <!--Displaying information about doctors-->
+                    <br><br><br><br>
+                    <b>Email</b> : <span>{{recName.email}} </span> <br>
+                    <b>Languages</b> : {{recName.languages}} <br>
+                    <b>Website</b> : {{recName.website}} <br>
+                    <b>Specialization</b> : {{recName.specialization}} <br>
+                    <b>Timings</b> :  <li ng-repeat="timeRec in recName.timings">
+                                              {{timeRec.dayTime}} 
+                                              </li>
+                    <b>Qualification</b> : {{recName.qualification}} <br>
+                    <b>Average Rating</b> : {{recName.avgRating}}  <br>
+                    <b>Ratings:</b>
+                    <li ng-repeat="i in recName.rating" style="font: bold">
+                      <b>Ratings: </b>: {{i.ratingByUser}}<br>
+                      <b>Comment: </b>: {{i.commentByUser}}<br>
+                      <b>Posted on: </b>: {{i.dateTimeByUser}}<br>
+                      </li>
+                      <br>
+
+                      <!--code for rating selectBox and commenting in textarea-->
+          
+                    <b>Rate Doctor</b>:     
+                    <select id="mode" ng-model="formData.rate">
+                    <option value=""disabled selected>Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select><br><br>
+
+                    <b>Comment</b>:
+                    <textarea ng-model="formData.alltext" style="width:70%; height: 40%;" ></textarea><br><br>
+                    <button class="submit" type="button" class="btn btn-success" ng-click="onComment(recName.name,recName.city)">Submit</button><br><br><br>
+          </div>
+          <br>  
+     <!--Showing and hiding data, as per user's wish-->
+        <button ng-click="setMarker(recName.latitude,recName.longitude)">show on map</button>                
+        <button ng-click="bool=!bool">Show/Hide more data</button> 
+        <hr id="dotted">
+      </div>
+      </div>
+    </div>
+
+    <div id="map"></div>
